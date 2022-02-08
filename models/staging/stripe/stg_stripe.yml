@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: Staged payment transaction data for our jaffle shop app.
+    columns: 
+      - name: payment_id
+        description: The primary key for the payment transaction.
+      - name: orderid
+        description: Order id from the orders table.
+      - name: paymentmethod
+        description: Payment method
+      - name: payment_status
+        description: "{{ doc('payment_status') }}"
+      - name: amount
+        description: Payment amount
+      - name: created
+        description: Payment transaction date
+      - name: _batched_at
+        description: Posting timestamp
